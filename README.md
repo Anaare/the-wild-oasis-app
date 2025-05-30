@@ -13,6 +13,7 @@ A full-featured hotel management application built for internal use by hotel emp
 
 - Employees must log in to access the application.
 - New users can only be created from within the application.
+- New users must confirm their email address to complete the registration process.
 - Authenticated users can:
   - Upload/change their avatar
   - Update email address
