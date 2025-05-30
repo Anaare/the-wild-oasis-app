@@ -2,7 +2,7 @@
 
 A full-featured hotel management application built for internal use by hotel employees. This app helps staff manage cabins, bookings, and guests efficiently — all in a modern, responsive interface with dark mode support.
 
-[🔗 Live Demo on Vercel](https://your-vercel-app-url.vercel.app)  
+[🔗 Live Demo on Vercel](https://the-wild-oasis-app-wine.vercel.app)  
 [📂 GitHub Repository](https://github.com/Anaare/the-wild-oasis-app)
 
 ---
