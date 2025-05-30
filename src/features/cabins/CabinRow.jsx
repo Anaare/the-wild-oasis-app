@@ -91,7 +91,7 @@ const CabinRow = ({ cabin }) => {
             <Modal.Window name="edit">
               <CreateCabinForm cabinToEdit={cabin} disabled={isCreating} />
             </Modal.Window>
-            <Modal.Window name="delete">
+            <Modal.Window name="delete" size="small">
               <ConfirmDelete
                 resourceName="cabins"
                 disabled={isDeleting}

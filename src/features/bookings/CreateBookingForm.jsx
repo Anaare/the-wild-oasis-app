@@ -159,7 +159,7 @@ function CreateBookingForm({ onCloseModal }) {
         />
       </FormRow>
 
-      <FormRow label="Status" error={errors?.status?.message}>
+      <FormRow label="status" error={errors?.status?.message}>
         <select
           id="status"
           {...register("status", {
@@ -167,10 +167,10 @@ function CreateBookingForm({ onCloseModal }) {
           })}
           disabled={isCreating}
         >
-          <option value="">Select status</option>
-          <option value="Unconfirmed">Unconfirmed</option>
-          <option value="Checked in">Checked in</option>
-          <option value="Checked out">Checked out</option>
+          <option value="">select status</option>
+          <option value="unconfirmed">unconfirmed</option>
+          <option value="checked-in">checked in</option>
+          <option value="checked-out">checked out</option>
         </select>
       </FormRow>
 
