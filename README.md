@@ -96,9 +96,13 @@ git clone https://github.com/Anaare/the-wild-oasis-app.git
 cd the-wild-oasis-app
 ```
 
+### 2. Install dependencies
+
 ```bash
 npm install
 ```
+
+### 3. Set up environment variables
 
 Create a .env file and add your supabase credentials
 
@@ -107,7 +111,7 @@ VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-Start development server
+### 4. Start the development server
 
 ```bash
 npm run dev
