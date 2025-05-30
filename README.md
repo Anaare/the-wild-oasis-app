@@ -15,6 +15,7 @@ A full-featured hotel management application built for internal use by hotel emp
 - New users can only be created from within the application.
 - Authenticated users can:
   - Upload/change their avatar
+  - Update email address
   - Update their name and password
 
 ### 🛏️ Cabins Management
@@ -44,6 +45,7 @@ A full-featured hotel management application built for internal use by hotel emp
   - Check in, check out, or delete a booking
   - On check-in, confirm payment (checkbox)
   - Add breakfast if not previously included
+  - Add new booking
 
 ### 🧍 Guest Management
 
