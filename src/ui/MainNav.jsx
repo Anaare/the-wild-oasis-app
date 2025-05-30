@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 
 import {
@@ -53,9 +55,6 @@ const StyledNavLink = styled(NavLink)`
     color: var(--color-brand-600);
   }
 `;
-
-import React from "react";
-import { NavLink } from "react-router-dom";
 
 const MainNav = () => {
   return (

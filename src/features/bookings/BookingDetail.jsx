@@ -3,6 +3,7 @@ import { useBooking } from "./useBooking";
 import { useNavigate } from "react-router-dom";
 import { HiArrowDownOnSquare, HiArrowUpOnSquare } from "react-icons/hi2";
 import { useCheckout } from "../check-in-out/useCheckout";
+import { useDeleteBooking } from "./useDeleteBooking";
 
 import styled from "styled-components";
 import BookingDataBox from "./BookingDataBox";
@@ -15,7 +16,7 @@ import ButtonText from "../../ui/ButtonText";
 import Spinner from "../../ui/Spinner";
 import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
-import { useDeleteBooking } from "./useDeleteBooking";
+import Empty from "../../ui/Empty";
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -30,7 +31,7 @@ function BookingDetail() {
   const navigate = useNavigate();
   const moveBack = useMoveBack();
 
-  if (!booking) return <p>Booking not found</p>;
+  if (!booking) return <Empty resource="booking" />;
 
   if (isPending) return <Spinner />;
 
