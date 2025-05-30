@@ -37,9 +37,20 @@ const Error = styled.span`
 `;
 
 const FormRow = ({ label, error, children }) => {
+  let inputId;
+  if (Array.isArray(children)) {
+    for (const child of children) {
+      if (child?.props?.id) {
+        inputId = child.props.id;
+        break;
+      }
+    }
+  } else {
+    inputId = children?.props?.id;
+  }
   return (
     <StyledFormRow>
-      {label && <Label htmlFor={children.props.id}>{label}</Label>}
+      {label && <Label htmlFor={inputId}>{label}</Label>}
       {children}
       {error && <Error>{error}</Error>}
     </StyledFormRow>

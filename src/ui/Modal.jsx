@@ -14,6 +14,9 @@ const StyledModal = styled.div`
   box-shadow: var(--shadow-lg);
   padding: 3.2rem 4rem;
   transition: all 0.5s;
+
+  max-height: 80vh;
+  overflow-y: auto;
 `;
 
 const Overlay = styled.div`
@@ -82,15 +85,21 @@ function Open({ children, opens: opensWindowName }) {
   });
 }
 
-const Window = ({ children, name }) => {
+const Window = ({ children, name, size = "large" }) => {
   const { openName, close } = useContext(ModalContext);
   const ref = useOutsideClick({ handler: close });
 
   if (name !== openName) return null;
 
+  const sizeStyles = {
+    small: { width: "400px", maxHeight: "500px" },
+    medium: { width: "600px", maxHeight: "700px" },
+    large: { width: "900px", maxHeight: "90vh" },
+  };
+
   return createPortal(
     <Overlay>
-      <StyledModal ref={ref}>
+      <StyledModal ref={ref} style={sizeStyles[size]}>
         <Button onClick={close}>
           <HiXMark />
         </Button>
